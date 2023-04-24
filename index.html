@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rakesh Nayak</title>
+
+
+<!-- add icon link -->
+        <link rel = "icon" href ="kr.jpg" type = "image/x-icon">
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="nav.css">
+<link rel="stylesheet" href="index.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+<!-- NAVBAR bootstrap cdn link -->
+
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<!-- boot strap js cdn link  -->
+
+
+
+   
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+.content {
+  margin-top: 10px;
+  margin: 10px;
+  padding: 50px;
+  box-sizing: border-box;
+  border: 5px solid #ccc;
+  border-radius: 20px;
+  border-top: 20px;
+  text-align: left  ;
+}
+
+.content h2,h5,h6 {
+  cursor: pointer;
+  display: block;
+}
+.content p {
+  display: none;
+  margin-top: 5px;
+}
+.result {
+  display: none;
+  margin-top: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.toggle-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.toggle-btn:hover {
+  background-color: #3e8e41;
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 5px;
+  width: 150px;
+}
+
+img:hover {
+  box-shadow: 0 0 4px 4px rgba(0, 140, 186, 0.5);
+  transform: scale(.8);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* IMAGE SLIDER */
+
+
+.slider {
+  position: relative;
+  width: 320px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slides {
+
+  display: flex;
+  width: 500%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 20%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.next,.prev{
+  position: absolute;
+  bottom: 20px;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  font-size: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+ 
+
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* adjust the position of the buttons for smaller screens *
+
+/* BLINK hover effect */
+.blink {
+  position:relative;
+  top: -35px;
+  right: -60px;
+  background-color: #ff5722;
+  color: white;
+  padding: 0.5em;
+  animation: blink 5s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+</style>
+
+</head>
+
+<!-- NAVBAR bootstrap code link -->
+
+<nav class="navbar navbar-expand-lg bg-info Mt-5 p-5 ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Welcome to my personal page</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Academic Credentials:">Academic Credentials:</a>
+            </li>
+            
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false"> MY current job skill</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#Professional Work Experience :">Professional Work Experience:</a></li>
+                <li><a class="dropdown-item" href="#Professional Overview :(Tata Trusts):">Professional Overview :(Tata Trusts):</a></li>
+                <li><a class="dropdown-item" href="#Professional Training Program-1:">Professional Training Program-1:</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#MEP Designing software skills:">MEP Designing software skills:</a></li>
+              </ul>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                MY  IT SKILL details
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#Professional  IT Software Training Program-2:">Professional  IT Software Training Program-2:</a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#Free Lancing -Full stack Web Development:">Free Lancing -Full stack Web Development:</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Personal information:</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+           
+
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+             
+ 
+          </form>
+        </div>
+      </div>
+    </nav>
+<!-- NAVBAR bootstrap code link end -->
+
+
+
+
+
+
+<body class="w3-light-grey">
+
+ 
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1500px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          
+          <h2 id="myname">MR.Rakesh Nayak</h2>
+          <h4>B-TECH in Mechanical Engineering & HVAC-R Certification</h4>
+<div class="slider">
+    <div class="slides">
+      <img src="12.jpg"><br>
+      <img src="rakesh.jpg" ><br>
+      <img src="1.jpg"><br>
+      <img src="2.jpg"><br>
+      <img src="3.jpg"><br>
+      <img src="4.jpg"><br>
+      <img src="5.jpg"><br>
+      <img src="6.jpg"><br>
+      <img src="7.jpg"><br>
+      <img src="8.jpg"><br>
+      <img src="9.jpg"><br>
+      <img src="10.jpg"><br>
+      <img src="11.jpg"><br>
+      <img src="12.jpg"><br>
+       <img src="13.jpg"><br>
+       <img src="14.jpg"><br>
+
+
+   </div>
+    <button class="prev">Prev</button>
+    <button class="next">Next</button>
+  </div>
+   
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+          </div>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i> Freelancing MEP Building Design  consultant & IT Front End Developer</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Pune, Nagpur , Bhubaneswar , India,Dubai,Singpore</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>nayakrakesh868@gmail.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+919890340920</p>
+          <p><i class="fa fa-whatsapp  w3-margin-right w3-large w3-text-teal"style="font-size:28px;color:green;" aria-hidden="true"></i>+91-9090305620</p>
+          <hr>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+          <p>MEP -HVAC, PHE, FIRE FIGHTING ,BMS ,ELECTRICAL ,ELV ,MGPS,CCTV,FAPA </p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+          </div>
+          <p>MEP  Design execution & Coordination</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">
+              <div class="w3-center w3-text-white">100%</div>
+            </div>
+          </div>
+          <p>Mep value engineering & BOQ preparation </p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+          </div>
+          <p>Rate analysys & Tendering &  Estimation </p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
+          </div>
+          <p>Frontend developer+Backend developer+Website hosting+RDBMS(mysql)</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
+          </div>
+          <p>Professional share market techanical analysis+ trading </p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
+          </div>
+          <hr><br>
+
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+          <p>English</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+          </div>
+          <p>HINDI</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
+          </div>
+          <p>ODIA</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
+          </div>
+          <br>
+        </div>
+        <p>Click here to download my cv:<p>
+            <a href="mepcv.pdf" target="_blank">Download PDF</a>
+      </div><br>
+         
+    <!-- End Left Column -->
+
+    </div>
+
+    <!-- Right Column -->
+
+    <div class="w3-twothird">
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+
+          <!--  Education/Academic Credentials:  -->
+<section id="Academic Credentials:">
+          <div class="content">
+      
+          <button class="toggle-btn" style="color:blanchedalmond;"> Academic Credentials: <span class="blink">Click here</span></button>
+       
+          <P class="w3-opacitystyle="style="color:chocolate;"><b><i class="fa fa-graduation-cap" style="font-size:48px;color:red"></i>B.TECH in Mechanical Engineering from NIT, Bhubaneswar under BPUT ODISHA </b></P>
+
+          <P class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>in the year 2010 to 2014  <span class="w3-tag w3-teal w3-round">with CGPA 7.19.</span></P>
+          <br>
+          <P class="w3-opacity"style="color:chocolate;"><b><i class="fa fa-university" style="font-size:38px;color:red"></i> Intermediate in science from RCST, Puri under CHSE, ODISHA,</b></P>
+
+          <P class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>in the year 2008 to 2010  <span class="w3-tag w3-teal w3-round">with 73%.</span></P>
+          <br>
+
+          <P class="w3-opacity"style="color:chocolate;"><b><i class="fa fa-graduation-cap" style="font-size:28px;color:red"></i>  Matriculation from GHS, Konark under BSE ODISHA </b></P>
+
+          <P class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>in the year 2008 <span class="w3-tag w3-teal w3-round">with 71%.</span></P>
+          <br>
+
+        </div>
+        </section>
+        <!-- END Education/Academic Credentials:  -->
+       <section id="Professional Work Experience :">
+        <!-- Professional Work Experience: -->
+     <div class="content">
+      
+          <button class="toggle-btn">Professional Work Experience :<span class="blink">Click here</button>
+
+          <P class="w3-opacity"><b><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Tata Trusts (Chandrapur Cancer care Foundation )</b></P>
+
+          <P class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>26th Nov 2021  <span class="w3-tag w3-teal w3-round">Current</span></P>
+
+          <p >Designation - MANAGER – MEP Hospital infra division  (Tendering &  Estimation) </p>
+
+          <p>Project Title  :Chandrapur Cancer Care foundation  (200,  BED CAPACITY WITH 2NOS LINAC+ NUCLEAR medicine PET CT +SPECT , MRI , CT )<br>
+
+            Client : Tata trusts & GOVT of Maharashtra <br>
+            Architects-Eddifice <br>
+            MEP Consultants: SNC<br>
+            Project cost -300 cr<br>
+            Location : Chandrapur , Nagapur  , INDIA
+          </p>
+
+          <P class="w3-opacity"><b><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>AMS  PROJECT CONSULTANTS PVT.LTD </b></P>
+
+          <P class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>5th April 2019 12th Nov 2021  <span class="w3-tag w3-teal w3-round">2.5YR</span></P>
+          <p >Designation - PROJECT ENGINEER MEP [HVAC, ELectrical,  BMS ,fire fighting & fire alarm ,Plumbing,MGPS ,PTS  Coordination, Billing, Execution, Design review, Facility  Management handover]
+         </p>
+          <p>Project Title  :COLUMBIA ASIA HOSPITAL ,BANER PUNE(350,  BED CAPACITY WITH 2NOS LINAC+ NUCLEAR medicine PET CT +SPECT , MRI , CT, Cath LAB )<br>
+
+            Client : COLUMBIA ASIA Hospital  <br>
+            Architects-KGD,BANGLORE  <br>
+            MEP Consultants: LEED  CONSULTANT<br>
+            Project cost -400 cr<br>
+            Location :BANER PUNE , INDIA  
+          </p>
+
+          <P class="w3-opacity"><b><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>HOSMAC INDIA PVT LTD</b></P>
+          <P class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>4th September 2017 to 31IST  march 2019   <span class="w3-tag w3-teal w3-round">1.7YR </span></P>
+          <p >Designation - MEP SITE COORDINATOR       (Design &  Execution )</p>
+          <p>Project Title  ::UIMS  450(150+150+150)  BED  MULTI SPECIALITY NULEAR  HOSPITL,BBSR<br>
+
+            Client : UTKAL HEALTHCARE PVT LTD <br>
+            Architects-ICHINEN ARCHITECTS PVT LTD <br>
+            MEP Consultants: GSP DESIGN CONSULTANT<br>
+            Project cost -500 cr<br>
+            Location :BBSR ODISHA, INDIA
+          </p>
+
+          <P class="w3-opacity"><b><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Power planner llc Dubai</b></P>
+
+          <P class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>1 JUN 2017 TO 26thAug  2017   <span class="w3-tag w3-teal w3-round">3 MONTH</span></P>
+          <p >Designation - HVAC ENGINEER </p>
+          <p>Project Title  :ARENCO HOTEL 5 STAR (150 mtr HEIGHT)<br>
+
+            Client : ABDULLAH AHMED ALMOOSA <br>
+            Architects-ARENCO  <br>
+            MEP Consultants: : CHINA STATE CONSTRUCTION (MIDDLE EAST )LLC <br>
+            Project cost -1000 cr<br>
+            Location : PLAM JUMEIRAH , DUBAI.
+          </p>
+
+          <P class="w3-opacity"><b><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>S M CONSULTANTA BBSR</b></P>
+
+          <P class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>30th April 2014  to 20th  may 2017   <span class="w3-tag w3-teal w3-round">3 YEAR</span></P>
+          <p >Designation - Asst.  Manager Design & PMC </p>
+          <p>Project Title  :Odisha Industrial Infrastructure Development Corporation (IDCO<br>
+
+            Design Consultant:  S.M. Consultant. BBSR<br>
+
+            Client :  GOVT of Odisha <br>
+            Work type : Heat load design (HAP 4.9),manual method using ISHRAE E-20 sheet ,duct design  BOQ, Estimation .( INCUBAATION CENTRE  1200 TR)<br>
+            MEP Project cost -30 cr<br>
+           Location :Bhubaneswar, odisha
+          </p>
+        </div>
+
+        </section>
+
+        <!--end of Professional Work Experience: -->
+
+       <section id="Professional Overview :(Tata Trusts):">
+
+        <!-- tata trust Overview: -->
+          <div class="content">
+      
+          <button class="toggle-btn">Professional Overview :(Tata Trusts):<span class="blink">Click here</button>
+       
+          <P class="w3-opacity"><b><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Tata Trusts (Chandrapur Cancer care Foundation )</b></P>
+
+          <P class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>26th Nov 2021  <span class="w3-tag w3-teal w3-round">Current</span></P>
+          
+          <p> Mep design and GFC dwg review for project <br>
+              Mep  boq preparation for budget approval from Govt of MPWD <br>
+             Mep material take up quantity preparation floor wise for budget verification <br>
+             Mep technical note sheet preparation for EXTRA item and NT item for approval<br> 
+            MEP high side and low side  equipment like -Transformer dg set , LT  panel , chiller , pump etc , separate budget preparation by collecting 3 OEM  market rate and rate analysis as per cpwd /mpwd format<br> 
+          MEP -execution work , dwg approval , Tds approval , Jmr , quality , bill checking and coordination with consultant and contractor <br>
+          ALL type of civil & mep work coordination with contractor for execution at site 
+         Tender MEP NIQ preparation <br>
+         MEP boq rate approval to vendor as per rate analysis Mention in Tender GCC <br>
+
+          </p>
+          
+        </div>
+
+        </section>
+
+        <!-- end of tata trusts Overview: --> 
+
+      <section id="Professional Training Program-1:">
+      
+        <!-- Professional Training Program-1  -->
+
+         <div class="content">
+      
+          <button class="toggle-btn">Professional Training Program-1:<span class="blink">Click here</button>
+       
+          <P class="w3-opacity"><b><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Mechanical System Design</b></P>
+          
+          <p>
+            Program Name     :MSD/MMP(Mechanical System Design/Mechanical Managers Program)<br>  
+            Course           :HVAC-R System Design & Drafting.    <br>                                                     
+            Duration         : 4 months <br>
+            Location         :KIIT UNIVERSITY, BHUBANESWAR, ODISHA.<br>
+            Certification    :Awarded by IAPMO<br>
+
+          </p>
+          
+        </div>
+
+
+        </section>
+
+        <!-- end Professional Training Program-1  -->
+       <section id="MEP Designing software skills:">
+
+        <!--  MEP Designing software skills: -->
+
+          <div class="content">
+      
+          <button class="toggle-btn">MEP Designing software skills:<span class="blink">Click here</button>
+       
+          <P class="w3-opacity"><b><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Mep design skill</b></P>
+        
+           <p >REVIT MEP MODELING(intern)<br></p>
+           <p >2D drafting package: Excellent 3Years MEP drafting Knowledge in AUTOCAD (2010, 2016, 2017,2019).<br></p>
+           <p >Heat  load calculation using –HAP SOFTWARE 4.9<br></p>
+           <p >Sprinkler system node calculation using ELITE software<br></p>
+           <p >Proficient in MS Office (Word, Excel, Power Point), MS Projects (intern)<br></p>
+           <p >HVAC drafting utility.<br> <p >
+           <p >Heat load calculation in accordance to the building survey following the ASHRAE /ISHRAE  , E-20 sheet & CARRIER HAP SOFTWARE (4.9)
+               CARRIER PSYCHROMETRIC CHART/SOFTWARE FOR CALCULATION OF HUMIDITY RATIO<br>
+                 Duct design by equal friction method using MQUAY duct size software.<br>
+            External Static Pressure (ESP) calculation of ducting using SMACNA standard.<br>
+         BOQ, tender specification  preparation.<br>
+         Make list prepare<br>
+         Chilled water piping design as per ASHRAE/ISHRAE GPM flow chart, with using of MQUAY PIPE SIZER SOFTWARE schematic designing shaft  wise unit check.<br>
+              Air distribution system design <br>
+         Fire fighting system design as per NFPA ,NBC,CPWD CODE (HYDRAULIC CALCULATION  USING  ELITE SOFTWARE , manual method ) <br>
+         Plumbing system design as per  IPC,NBC-INDIA , UPC <br>
+        MEP drafting using AUTOCAD.<br>
+          <p >
+              
+        </div>
+
+
+        </section>
+
+<!-- end  MEPDesigning software skills: -->
+
+<section id="Professional  IT Software Training Program-2:">
+
+<!-- Professional Training Program-2  -->
+       <div class="content">
+      
+          <button class="toggle-btn">Professional  IT Software Training Program-2:<span class="blink">Click here</button>
+       
+          <P class="w3-opacity"><b><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Full stack Web Development </b></P>
+          
+          <p>web development skill  :Front End dev , Back end dev, Database  Management , Webhosting 
+
+            <br>
+            Program Name      :Full-Stack Web Developer  <br>  
+            Course           : HTML5, CSS3, Javascript,bootstrap,j query Nodejs, Reactjs, MongoDB, Web3 and DApps ,PHP, MYSQL, PYthon,woordpres <br>                                                     
+            Duration         : 4 months <br>
+            Location         :pune india<br>
+            Certification    :udemy,w3-school<br>
+
+          </p>
+          
+        </div>
+
+
+        </section>
+        <!-- end Professional Training Program-2  -->
+
+<section id="Free Lancing -Full stack Web Development:">
+
+        <!-- Free Lancing -Full stack Web Development -->
+         <div class="content">
+      
+          <button class="toggle-btn"> Free Lancing -Full stack Web Development:<span class="blink">Click here</button>
+       
+          <P class="w3-opacity"><b><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Full stack Web Development </b></P>
+          
+          <p>Build Business Website For Client<br>
+            Dynamic Professional Website <br>
+            web hostiong free for -1 year<br>
+            domain free for -1year (.com)<br>
+            upto 10 front page free<br>
+            SSL certificate<br>
+            social media integration<br>
+            whatsapp intergration <br>
+            business mail id<br>
+            google map<br>
+            contact form<br>
+            techanical support <br>
+            Database mangement
+         
+          </p>
+          
+        </div>
+
+        </section>
+        <!-- end of Free Lancing -Full stack Web Development  -->
+
+        <section id="Personal Information:">
+
+        <!-- PERSONAL INFORMATION -->
+
+         <div class="content">
+      
+          <button class="toggle-btn"> Personal Information:<span class="blink">Click here</button>
+       
+          <P class="w3-opacity"><b><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>About ME & Family details </b></P>
+          
+          <p>Name -Rakesh NAYAK <br>
+            DOB-10.08.1991, time  -12.15am, place-konark, puri<br>
+            height-5ft10in<br>
+            mother tongue-odia<br>
+            marital status-never married<br>
+            religion -Hindu<br>
+            caste-khandayat<br>
+            gothram-Bhardaja<br>
+            rassi-leo 10/5<br>
+            Annual income-12 lakhs<br>
+            home town-puri, konark, odisha<br>
+            current location - Nagpur , pune<br>
+            Hobbies- Travelling new place  , spritual work ,The Bhagawat Geeta distribution seva, sports gym , new skill<br>
+            family status- middle class<br>
+            father occupation - passed away<br>
+            mothers occupation -homemaker<br>
+            sister -1 married <br>
+
+           <br>
+         
+          </p>
+          
+        </div>
+</section>
+        <!-- end of PERSONAL information   -->
+
+
+<div class="result"></div>
+
+</div>
+</div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>Find me on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p> <i class="fa fa-copyright" aria-hidden="true"></i>“Through selfless service, you will always be fruitful and find the fulfillment of your desires”
+― Bhagavad Gita</a></p>
+  <p>Powered by <i class="fa fa-copyright" aria-hidden="true"></i>Rakesh Nayak</a></p>
+</footer>
+
+<script src="cv.js" ></script>
+
+<script>
+
+ function textWriter(id, delay) {
+  let element = document.getElementById(id);
+  let text = element.innerHTML;
+  element.innerHTML = "";
+  let i = 0;
+  function write() {
+    if (i < text.length) {
+      element.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(write, delay);
+    }
+  }
+  write();
+}
+
+
+
+
+  textWriter("myname", 100);
+  
+
+
+</script>
+
+
+
+
+
+
+
+
+
+<!-- boot strap js cdn link  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<!-- boot strap js cdn link  -->
+
+</body>
+</html>

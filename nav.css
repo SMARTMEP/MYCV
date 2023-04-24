@@ -1,0 +1,138 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 82.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+nav {
+    position: !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:chocolate;
+  color: chocolate;
+  padding: 30px 30px;
+  
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-menu{
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.nav-menu li {
+  list-style: none;
+
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: green;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        
+        position: fixed;
+        left: -100%;
+        top: 6rem;
+        flex-direction: column;
+        background-color: green;
+        width: 100%;
+        height:auto!important;
+        border-radius: 5px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 47px rgba(0, 0, 0, 0.05);
+    }
+
+
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        position:!important;
+        left: 80%;
+
+    }
+
+}
+// Inside the Media Query.
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+   /* to design footer*/
+
+footer {
+    display: block
+}
+
+.w3-container {
+    padding: 0.01em 16px
+}
+    .w3-container:after,.w3-container:before,{
+    display: table;
+    clear: both
+}
+
+.w3-margin-top {
+    margin-top: 768px!important
+}
+
+.w3-teal,.w3-hover-teal:hover {
+    color: #fff!important;
+    background-color: #009688!important
+}
+
+.w3-center {
+    text-align: center
+}
